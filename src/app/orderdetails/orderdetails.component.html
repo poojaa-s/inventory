@@ -1,0 +1,13 @@
+<p>orderdetails works!</p>
+
+<ul *ngFor="let order of order">
+    <li class="list-group-item list-group-item-action list-group-item-danger">
+        {{order.total}} {{order.orderType}} {{order.orderDate}} {{order.cid}} 
+    </li>
+    
+    </ul>
+    <router-outlet></router-outlet>
+
+
+
+

@@ -1,0 +1,41 @@
+<p>ordercreate works!</p>
+
+<h2 class="text-uppercase text-center mb-5">
+    Add New Orders</h2>
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="ototal"><strong>Order Total</strong></label>
+    <input type="number" id="ototal" 
+    [(ngModel)]="orderDetails.total"
+        class="form-control form-control-lg" />
+
+</div>
+<div class="form-outline mb-4">
+    <label class="form-label" for="otype"><strong>Order Type</strong></label>
+    <input type="text" id="otype" 
+    [(ngModel)]="orderDetails.orderType"
+        class="form-control form-control-lg" />
+
+</div>
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="odate"><strong>Ordered Date</strong></label>
+    <input type="text" bsDatePicker id="odate" 
+    [(ngModel)]="orderDetails.orderDate"
+        class="form-control form-control-lg" />
+
+</div>
+
+
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="cid"><strong>Customer ID</strong></label>
+    <input type="number" id="cid" 
+    [(ngModel)]="orderDetails.cid"
+        class="form-control form-control-lg" />
+
+
+    <button (click)="addOrder()"  class="btn btn-primary"> 
+      Add Order
+    </button>
+

@@ -1,0 +1,32 @@
+<p>orderlist works!</p>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Order Total</th>
+            <th> Order Type</th>
+            <th> Order Date</th>
+            <th> Customer ID </th>
+
+        
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let ord of orders" >
+            
+            <td> {{ ord.oid}} </td>
+            <td> {{ ord.total }} </td>
+            <td> {{ ord.orderType}}</td>
+            <td> {{ ord.orderDate}}</td>
+            <td> {{ ord.cid}}</td>
+
+<td>
+                <!-- <button (click) = "updateCustomer(customer.cid)" class = "btn btn-info"> Update</button> -->
+                <button (click) = "onDelete(ord)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+             <!-- <button (click) = "orderlist(ord.oid)" class = "btn btn-info" style="margin-left: 10px"> View</button>  -->
+            </td>
+            <td> <button routerLink="/orderedit/{{ord.oid}}" class="btn btn-danger">Edit</button></td>
+
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet> 

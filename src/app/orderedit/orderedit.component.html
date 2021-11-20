@@ -1,0 +1,45 @@
+<p>orderedit works!</p>
+
+
+<h1>EDIT ORDER</h1>
+
+ <div class="form-outline mb-4" >
+  <label class="form-label" for="oid"><strong>Enter OID</strong></label> <input
+    type="text" id="oid" required pattern="[a-zA-Z' ']" minlength="13" placeholder="Enter OID"
+                            [(ngModel)]="orderDetails.oid"  #ba="ngModel"
+    class="form-control form-control-lg" /> 
+
+<div class="form-outline mb-4" >
+  <label class="form-label" for="total"><strong>Enter Total</strong></label> <input
+    type="text" id="total"   placeholder="Enter Total"
+                            [(ngModel)]="orderDetails.total"  #ba="ngModel"
+    class="form-control form-control-lg" />
+   
+<div class="form-outline mb-4" >
+  <label class="form-label" for="orderType">
+    <strong>Order Type</strong> </label> <input type="text" id="orderType" 
+                            [(ngModel)]="orderDetails.orderType"  #bt="ngModel" placeholder="Enter order type"
+    class="form-control form-control-lg" />
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="orderDate"><strong>Ordered Date</strong></label>
+        <input type="text" bsDatePicker id="orderDate" 
+        [(ngModel)]="orderDetails.orderDate"
+            class="form-control form-control-lg" />
+
+    </div>
+
+
+    <div class="form-outline mb-4" >
+        <label class="form-label" for="cid"><strong>Enter CID</strong></label> <input
+          type="text" id="cid" required pattern="[a-zA-Z' ']" minlength="13" placeholder="Enter CID"
+                                  [(ngModel)]="orderDetails.cid"  #ba="ngModel"
+          class="form-control form-control-lg" /> 
+      
+
+    <button (click)="updateOrder()"  class="btn btn-primary">
+      Edit order
+    </button>
+
+      
+

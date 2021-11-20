@@ -1,0 +1,27 @@
+
+<h2> CUSTOMER LIST</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+
+            <th> Phone </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cust of customers" >
+            
+            <td> {{ cust.cid}} </td>
+            <td> {{ cust.cname }} </td>
+            <td> {{ cust.phone}} </td>
+<td>
+       
+                <button (click) = "onDelete(cust)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+             <!-- <button (click) = "customerlist(cust.cid)" class = "btn btn-info" style="margin-left: 10px"> View</button>  -->
+            </td>
+            <td> <button routerLink="/customeredit/{{cust.cid}}" class="btn btn-danger">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+<router-outlet></router-outlet>

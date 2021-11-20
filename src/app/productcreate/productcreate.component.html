@@ -1,0 +1,51 @@
+<p>productcreate works!</p>
+
+<h2 class="text-uppercase text-center mb-5">
+    Add New Products</h2>
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="prname"><strong>Product name</strong></label>
+    <input type="text" id="prname" 
+    [(ngModel)]="productDetails.pname"
+        class="form-control form-control-lg" />
+
+</div>
+<div class="form-outline mb-4">
+    <label class="form-label" for="pprice"><strong>Price</strong></label>
+    <input type="number" id="pprice" 
+    [(ngModel)]="productDetails.price"
+        class="form-control form-control-lg" />
+
+</div>
+<div class="form-outline mb-4">
+    <label class="form-label" for="quan"><strong>Quantity</strong></label>
+    <input type="number" id="quan" 
+    [(ngModel)]="productDetails.qty"
+        class="form-control form-control-lg" />
+
+</div>
+
+<div class="form-outline mb-4">
+    <label class="form-label" for="mdat"><strong>MDate</strong></label>
+    <input type="text" bsDatePicker id="mdat" 
+    [(ngModel)]="productDetails.mdate"
+        class="form-control form-control-lg" />
+
+</div>
+<div class="form-outline mb-4">
+    <label class="form-label" for="edat"><strong>EDate</strong></label>
+    <input type="text" bsDatePicker id="edat" 
+    [(ngModel)]="productDetails.edate"
+        class="form-control form-control-lg" />
+
+</div>
+
+<!-- <button (onclick)="addCustomer()"  routerLink="/customerlist" class="btn btn-primary"> 
+      Add customer
+    </button>-->
+
+
+    <div class="d-flex justify-content-center">
+        <button (on click)="addProduct()" type="submit" class="btn btn-light btn-block btn-lg gradient-custom-4 text-body"><strong>Add Product</strong></button>
+        </div>
+        
